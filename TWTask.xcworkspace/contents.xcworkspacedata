@@ -5,9 +5,9 @@
       location = "group:TWTask/TWTask.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Network/Network.xcodeproj">
+      location = "group:Persistence/Persistence.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Persistence/Persistence.xcodeproj">
+      location = "group:Networking/Networking.xcodeproj">
    </FileRef>
 </Workspace>

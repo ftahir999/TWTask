@@ -7,180 +7,209 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D86542382285D1AC0004FAAD /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D865422E2285D1AC0004FAAD /* Network.framework */; };
-		D865423D2285D1AC0004FAAD /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D865423C2285D1AC0004FAAD /* NetworkTests.swift */; };
-		D865423F2285D1AC0004FAAD /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = D86542312285D1AC0004FAAD /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8524961228C90590098F259 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8524957228C90590098F259 /* Networking.framework */; };
+		D8524966228C90590098F259 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524965228C90590098F259 /* NetworkingTests.swift */; };
+		D8524968228C90590098F259 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = D852495A228C90590098F259 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D85249BF228C95E00098F259 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BB228C95E00098F259 /* EndPoint.swift */; };
+		D85249C0228C95E00098F259 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BB228C95E00098F259 /* EndPoint.swift */; };
+		D85249C1228C95E00098F259 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BC228C95E00098F259 /* NetworkTask.swift */; };
+		D85249C2228C95E00098F259 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BC228C95E00098F259 /* NetworkTask.swift */; };
+		D85249C3228C95E00098F259 /* EndPointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BD228C95E00098F259 /* EndPointProvider.swift */; };
+		D85249C4228C95E00098F259 /* EndPointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BD228C95E00098F259 /* EndPointProvider.swift */; };
+		D85249C5228C95E00098F259 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BE228C95E00098F259 /* NetworkManager.swift */; };
+		D85249C6228C95E00098F259 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BE228C95E00098F259 /* NetworkManager.swift */; };
+		D85249EF228CB3820098F259 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249EE228CB3820098F259 /* Environment.swift */; };
+		D85249F0228CB3820098F259 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249EE228CB3820098F259 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D86542392285D1AC0004FAAD /* PBXContainerItemProxy */ = {
+		D8524962228C90590098F259 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D86542252285D1AC0004FAAD /* Project object */;
+			containerPortal = D852494E228C90590098F259 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D865422D2285D1AC0004FAAD;
-			remoteInfo = Network;
+			remoteGlobalIDString = D8524956228C90590098F259;
+			remoteInfo = Networking;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D865422E2285D1AC0004FAAD /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D86542312285D1AC0004FAAD /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
-		D86542322285D1AC0004FAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D86542372285D1AC0004FAAD /* NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D865423C2285D1AC0004FAAD /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
-		D865423E2285D1AC0004FAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8524957228C90590098F259 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D852495A228C90590098F259 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		D852495B228C90590098F259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8524960228C90590098F259 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8524965228C90590098F259 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		D8524967228C90590098F259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D85249BB228C95E00098F259 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		D85249BC228C95E00098F259 /* NetworkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
+		D85249BD228C95E00098F259 /* EndPointProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointProvider.swift; sourceTree = "<group>"; };
+		D85249BE228C95E00098F259 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D85249EE228CB3820098F259 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D865422B2285D1AC0004FAAD /* Frameworks */ = {
+		D8524954228C90590098F259 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D86542342285D1AC0004FAAD /* Frameworks */ = {
+		D852495D228C90590098F259 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D86542382285D1AC0004FAAD /* Network.framework in Frameworks */,
+				D8524961228C90590098F259 /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D86542242285D1AC0004FAAD = {
+		D852494D228C90590098F259 = {
 			isa = PBXGroup;
 			children = (
-				D86542302285D1AC0004FAAD /* Network */,
-				D865423B2285D1AC0004FAAD /* NetworkTests */,
-				D865422F2285D1AC0004FAAD /* Products */,
+				D8524959228C90590098F259 /* Networking */,
+				D8524964228C90590098F259 /* NetworkingTests */,
+				D8524958228C90590098F259 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D865422F2285D1AC0004FAAD /* Products */ = {
+		D8524958228C90590098F259 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D865422E2285D1AC0004FAAD /* Network.framework */,
-				D86542372285D1AC0004FAAD /* NetworkTests.xctest */,
+				D8524957228C90590098F259 /* Networking.framework */,
+				D8524960228C90590098F259 /* NetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D86542302285D1AC0004FAAD /* Network */ = {
+		D8524959228C90590098F259 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				D86542312285D1AC0004FAAD /* Network.h */,
-				D86542322285D1AC0004FAAD /* Info.plist */,
+				D85249BA228C95A50098F259 /* Core */,
+				D852495A228C90590098F259 /* Networking.h */,
+				D852495B228C90590098F259 /* Info.plist */,
 			);
-			path = Network;
+			path = Networking;
 			sourceTree = "<group>";
 		};
-		D865423B2285D1AC0004FAAD /* NetworkTests */ = {
+		D8524964228C90590098F259 /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				D865423C2285D1AC0004FAAD /* NetworkTests.swift */,
-				D865423E2285D1AC0004FAAD /* Info.plist */,
+				D8524965228C90590098F259 /* NetworkingTests.swift */,
+				D8524967228C90590098F259 /* Info.plist */,
 			);
-			path = NetworkTests;
+			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		D85249BA228C95A50098F259 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D85249BB228C95E00098F259 /* EndPoint.swift */,
+				D85249BD228C95E00098F259 /* EndPointProvider.swift */,
+				D85249BE228C95E00098F259 /* NetworkManager.swift */,
+				D85249BC228C95E00098F259 /* NetworkTask.swift */,
+				D85249EE228CB3820098F259 /* Environment.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D86542292285D1AC0004FAAD /* Headers */ = {
+		D8524952228C90590098F259 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D865423F2285D1AC0004FAAD /* Network.h in Headers */,
+				D8524968228C90590098F259 /* Networking.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D865422D2285D1AC0004FAAD /* Network */ = {
+		D8524956228C90590098F259 /* Networking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D86542422285D1AC0004FAAD /* Build configuration list for PBXNativeTarget "Network" */;
+			buildConfigurationList = D852496B228C90590098F259 /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
-				D86542292285D1AC0004FAAD /* Headers */,
-				D865422A2285D1AC0004FAAD /* Sources */,
-				D865422B2285D1AC0004FAAD /* Frameworks */,
-				D865422C2285D1AC0004FAAD /* Resources */,
+				D8524952228C90590098F259 /* Headers */,
+				D8524953228C90590098F259 /* Sources */,
+				D8524954228C90590098F259 /* Frameworks */,
+				D8524955228C90590098F259 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Network;
-			productName = Network;
-			productReference = D865422E2285D1AC0004FAAD /* Network.framework */;
+			name = Networking;
+			productName = Networking;
+			productReference = D8524957228C90590098F259 /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D86542362285D1AC0004FAAD /* NetworkTests */ = {
+		D852495F228C90590098F259 /* NetworkingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D86542452285D1AC0004FAAD /* Build configuration list for PBXNativeTarget "NetworkTests" */;
+			buildConfigurationList = D852496E228C90590098F259 /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
 			buildPhases = (
-				D86542332285D1AC0004FAAD /* Sources */,
-				D86542342285D1AC0004FAAD /* Frameworks */,
-				D86542352285D1AC0004FAAD /* Resources */,
+				D852495C228C90590098F259 /* Sources */,
+				D852495D228C90590098F259 /* Frameworks */,
+				D852495E228C90590098F259 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D865423A2285D1AC0004FAAD /* PBXTargetDependency */,
+				D8524963228C90590098F259 /* PBXTargetDependency */,
 			);
-			name = NetworkTests;
-			productName = NetworkTests;
-			productReference = D86542372285D1AC0004FAAD /* NetworkTests.xctest */;
+			name = NetworkingTests;
+			productName = NetworkingTests;
+			productReference = D8524960228C90590098F259 /* NetworkingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D86542252285D1AC0004FAAD /* Project object */ = {
+		D852494E228C90590098F259 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Farhan Tahir";
 				TargetAttributes = {
-					D865422D2285D1AC0004FAAD = {
+					D8524956228C90590098F259 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
-					D86542362285D1AC0004FAAD = {
+					D852495F228C90590098F259 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = D86542282285D1AC0004FAAD /* Build configuration list for PBXProject "Network" */;
+			buildConfigurationList = D8524951228C90590098F259 /* Build configuration list for PBXProject "Networking" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = D86542242285D1AC0004FAAD;
-			productRefGroup = D865422F2285D1AC0004FAAD /* Products */;
+			mainGroup = D852494D228C90590098F259;
+			productRefGroup = D8524958228C90590098F259 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D865422D2285D1AC0004FAAD /* Network */,
-				D86542362285D1AC0004FAAD /* NetworkTests */,
+				D8524956228C90590098F259 /* Networking */,
+				D852495F228C90590098F259 /* NetworkingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D865422C2285D1AC0004FAAD /* Resources */ = {
+		D8524955228C90590098F259 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D86542352285D1AC0004FAAD /* Resources */ = {
+		D852495E228C90590098F259 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,33 +219,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D865422A2285D1AC0004FAAD /* Sources */ = {
+		D8524953228C90590098F259 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85249C5228C95E00098F259 /* NetworkManager.swift in Sources */,
+				D85249C3228C95E00098F259 /* EndPointProvider.swift in Sources */,
+				D85249BF228C95E00098F259 /* EndPoint.swift in Sources */,
+				D85249C1228C95E00098F259 /* NetworkTask.swift in Sources */,
+				D85249EF228CB3820098F259 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D86542332285D1AC0004FAAD /* Sources */ = {
+		D852495C228C90590098F259 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D865423D2285D1AC0004FAAD /* NetworkTests.swift in Sources */,
+				D85249C0228C95E00098F259 /* EndPoint.swift in Sources */,
+				D85249F0228CB3820098F259 /* Environment.swift in Sources */,
+				D85249C4228C95E00098F259 /* EndPointProvider.swift in Sources */,
+				D85249C6228C95E00098F259 /* NetworkManager.swift in Sources */,
+				D85249C2228C95E00098F259 /* NetworkTask.swift in Sources */,
+				D8524966228C90590098F259 /* NetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D865423A2285D1AC0004FAAD /* PBXTargetDependency */ = {
+		D8524963228C90590098F259 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D865422D2285D1AC0004FAAD /* Network */;
-			targetProxy = D86542392285D1AC0004FAAD /* PBXContainerItemProxy */;
+			target = D8524956228C90590098F259 /* Networking */;
+			targetProxy = D8524962228C90590098F259 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D86542402285D1AC0004FAAD /* Debug */ = {
+		D8524969228C90590098F259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +319,7 @@
 			};
 			name = Debug;
 		};
-		D86542412285D1AC0004FAAD /* Release */ = {
+		D852496A228C90590098F259 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -338,9 +377,10 @@
 			};
 			name = Release;
 		};
-		D86542432285D1AC0004FAAD /* Debug */ = {
+		D852496C228C90590098F259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -348,24 +388,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Network/Info.plist;
+				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ft.Network;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D86542442285D1AC0004FAAD /* Release */ = {
+		D852496D228C90590098F259 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -373,14 +415,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Network/Info.plist;
+				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ft.Network;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -388,36 +430,38 @@
 			};
 			name = Release;
 		};
-		D86542462285D1AC0004FAAD /* Debug */ = {
+		D852496F228C90590098F259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGY2RQ2389;
-				INFOPLIST_FILE = NetworkTests/Info.plist;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NetworkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NetworkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D86542472285D1AC0004FAAD /* Release */ = {
+		D8524970228C90590098F259 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGY2RQ2389;
-				INFOPLIST_FILE = NetworkTests/Info.plist;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NetworkTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NetworkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,34 +471,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D86542282285D1AC0004FAAD /* Build configuration list for PBXProject "Network" */ = {
+		D8524951228C90590098F259 /* Build configuration list for PBXProject "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D86542402285D1AC0004FAAD /* Debug */,
-				D86542412285D1AC0004FAAD /* Release */,
+				D8524969228C90590098F259 /* Debug */,
+				D852496A228C90590098F259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D86542422285D1AC0004FAAD /* Build configuration list for PBXNativeTarget "Network" */ = {
+		D852496B228C90590098F259 /* Build configuration list for PBXNativeTarget "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D86542432285D1AC0004FAAD /* Debug */,
-				D86542442285D1AC0004FAAD /* Release */,
+				D852496C228C90590098F259 /* Debug */,
+				D852496D228C90590098F259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D86542452285D1AC0004FAAD /* Build configuration list for PBXNativeTarget "NetworkTests" */ = {
+		D852496E228C90590098F259 /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D86542462285D1AC0004FAAD /* Debug */,
-				D86542472285D1AC0004FAAD /* Release */,
+				D852496F228C90590098F259 /* Debug */,
+				D8524970228C90590098F259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D86542252285D1AC0004FAAD /* Project object */;
+	rootObject = D852494E228C90590098F259 /* Project object */;
 }

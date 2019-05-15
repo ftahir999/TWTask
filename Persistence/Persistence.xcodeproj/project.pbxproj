@@ -7,81 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D865425C2285D1D20004FAAD /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D86542522285D1D20004FAAD /* Persistence.framework */; };
-		D86542612285D1D20004FAAD /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86542602285D1D20004FAAD /* PersistenceTests.swift */; };
-		D86542632285D1D20004FAAD /* Persistence.h in Headers */ = {isa = PBXBuildFile; fileRef = D86542552285D1D20004FAAD /* Persistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8524985228C91F00098F259 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D852497B228C91F00098F259 /* Persistence.framework */; };
+		D852498A228C91F00098F259 /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524989228C91F00098F259 /* PersistenceTests.swift */; };
+		D852498C228C91F00098F259 /* Persistence.h in Headers */ = {isa = PBXBuildFile; fileRef = D852497E228C91F00098F259 /* Persistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D85249C8228C960F0098F259 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249C7228C960F0098F259 /* Persistence.swift */; };
+		D85249C9228C960F0098F259 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249C7228C960F0098F259 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D865425D2285D1D20004FAAD /* PBXContainerItemProxy */ = {
+		D8524986228C91F00098F259 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D86542492285D1D20004FAAD /* Project object */;
+			containerPortal = D8524972228C91F00098F259 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D86542512285D1D20004FAAD;
+			remoteGlobalIDString = D852497A228C91F00098F259;
 			remoteInfo = Persistence;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D86542522285D1D20004FAAD /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D86542552285D1D20004FAAD /* Persistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persistence.h; sourceTree = "<group>"; };
-		D86542562285D1D20004FAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D865425B2285D1D20004FAAD /* PersistenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D86542602285D1D20004FAAD /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
-		D86542622285D1D20004FAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D852497B228C91F00098F259 /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D852497E228C91F00098F259 /* Persistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persistence.h; sourceTree = "<group>"; };
+		D852497F228C91F00098F259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8524984228C91F00098F259 /* PersistenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8524989228C91F00098F259 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
+		D852498B228C91F00098F259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D85249C7228C960F0098F259 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D865424F2285D1D20004FAAD /* Frameworks */ = {
+		D8524978228C91F00098F259 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D86542582285D1D20004FAAD /* Frameworks */ = {
+		D8524981228C91F00098F259 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D865425C2285D1D20004FAAD /* Persistence.framework in Frameworks */,
+				D8524985228C91F00098F259 /* Persistence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D86542482285D1D20004FAAD = {
+		D8524971228C91F00098F259 = {
 			isa = PBXGroup;
 			children = (
-				D86542542285D1D20004FAAD /* Persistence */,
-				D865425F2285D1D20004FAAD /* PersistenceTests */,
-				D86542532285D1D20004FAAD /* Products */,
+				D852497D228C91F00098F259 /* Persistence */,
+				D8524988228C91F00098F259 /* PersistenceTests */,
+				D852497C228C91F00098F259 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D86542532285D1D20004FAAD /* Products */ = {
+		D852497C228C91F00098F259 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D86542522285D1D20004FAAD /* Persistence.framework */,
-				D865425B2285D1D20004FAAD /* PersistenceTests.xctest */,
+				D852497B228C91F00098F259 /* Persistence.framework */,
+				D8524984228C91F00098F259 /* PersistenceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D86542542285D1D20004FAAD /* Persistence */ = {
+		D852497D228C91F00098F259 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				D86542552285D1D20004FAAD /* Persistence.h */,
-				D86542562285D1D20004FAAD /* Info.plist */,
+				D85249C7228C960F0098F259 /* Persistence.swift */,
+				D852497E228C91F00098F259 /* Persistence.h */,
+				D852497F228C91F00098F259 /* Info.plist */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		D865425F2285D1D20004FAAD /* PersistenceTests */ = {
+		D8524988228C91F00098F259 /* PersistenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				D86542602285D1D20004FAAD /* PersistenceTests.swift */,
-				D86542622285D1D20004FAAD /* Info.plist */,
+				D8524989228C91F00098F259 /* PersistenceTests.swift */,
+				D852498B228C91F00098F259 /* Info.plist */,
 			);
 			path = PersistenceTests;
 			sourceTree = "<group>";
@@ -89,25 +93,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D865424D2285D1D20004FAAD /* Headers */ = {
+		D8524976228C91F00098F259 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D86542632285D1D20004FAAD /* Persistence.h in Headers */,
+				D852498C228C91F00098F259 /* Persistence.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D86542512285D1D20004FAAD /* Persistence */ = {
+		D852497A228C91F00098F259 /* Persistence */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D86542662285D1D20004FAAD /* Build configuration list for PBXNativeTarget "Persistence" */;
+			buildConfigurationList = D852498F228C91F00098F259 /* Build configuration list for PBXNativeTarget "Persistence" */;
 			buildPhases = (
-				D865424D2285D1D20004FAAD /* Headers */,
-				D865424E2285D1D20004FAAD /* Sources */,
-				D865424F2285D1D20004FAAD /* Frameworks */,
-				D86542502285D1D20004FAAD /* Resources */,
+				D8524976228C91F00098F259 /* Headers */,
+				D8524977228C91F00098F259 /* Sources */,
+				D8524978228C91F00098F259 /* Frameworks */,
+				D8524979228C91F00098F259 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -115,72 +119,73 @@
 			);
 			name = Persistence;
 			productName = Persistence;
-			productReference = D86542522285D1D20004FAAD /* Persistence.framework */;
+			productReference = D852497B228C91F00098F259 /* Persistence.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D865425A2285D1D20004FAAD /* PersistenceTests */ = {
+		D8524983228C91F00098F259 /* PersistenceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D86542692285D1D20004FAAD /* Build configuration list for PBXNativeTarget "PersistenceTests" */;
+			buildConfigurationList = D8524992228C91F00098F259 /* Build configuration list for PBXNativeTarget "PersistenceTests" */;
 			buildPhases = (
-				D86542572285D1D20004FAAD /* Sources */,
-				D86542582285D1D20004FAAD /* Frameworks */,
-				D86542592285D1D20004FAAD /* Resources */,
+				D8524980228C91F00098F259 /* Sources */,
+				D8524981228C91F00098F259 /* Frameworks */,
+				D8524982228C91F00098F259 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D865425E2285D1D20004FAAD /* PBXTargetDependency */,
+				D8524987228C91F00098F259 /* PBXTargetDependency */,
 			);
 			name = PersistenceTests;
 			productName = PersistenceTests;
-			productReference = D865425B2285D1D20004FAAD /* PersistenceTests.xctest */;
+			productReference = D8524984228C91F00098F259 /* PersistenceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D86542492285D1D20004FAAD /* Project object */ = {
+		D8524972228C91F00098F259 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Farhan Tahir";
 				TargetAttributes = {
-					D86542512285D1D20004FAAD = {
+					D852497A228C91F00098F259 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
-					D865425A2285D1D20004FAAD = {
+					D8524983228C91F00098F259 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = D865424C2285D1D20004FAAD /* Build configuration list for PBXProject "Persistence" */;
+			buildConfigurationList = D8524975228C91F00098F259 /* Build configuration list for PBXProject "Persistence" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = D86542482285D1D20004FAAD;
-			productRefGroup = D86542532285D1D20004FAAD /* Products */;
+			mainGroup = D8524971228C91F00098F259;
+			productRefGroup = D852497C228C91F00098F259 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D86542512285D1D20004FAAD /* Persistence */,
-				D865425A2285D1D20004FAAD /* PersistenceTests */,
+				D852497A228C91F00098F259 /* Persistence */,
+				D8524983228C91F00098F259 /* PersistenceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D86542502285D1D20004FAAD /* Resources */ = {
+		D8524979228C91F00098F259 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D86542592285D1D20004FAAD /* Resources */ = {
+		D8524982228C91F00098F259 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,33 +195,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D865424E2285D1D20004FAAD /* Sources */ = {
+		D8524977228C91F00098F259 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85249C8228C960F0098F259 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D86542572285D1D20004FAAD /* Sources */ = {
+		D8524980228C91F00098F259 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D86542612285D1D20004FAAD /* PersistenceTests.swift in Sources */,
+				D852498A228C91F00098F259 /* PersistenceTests.swift in Sources */,
+				D85249C9228C960F0098F259 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D865425E2285D1D20004FAAD /* PBXTargetDependency */ = {
+		D8524987228C91F00098F259 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D86542512285D1D20004FAAD /* Persistence */;
-			targetProxy = D865425D2285D1D20004FAAD /* PBXContainerItemProxy */;
+			target = D852497A228C91F00098F259 /* Persistence */;
+			targetProxy = D8524986228C91F00098F259 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D86542642285D1D20004FAAD /* Debug */ = {
+		D852498D228C91F00098F259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +287,7 @@
 			};
 			name = Debug;
 		};
-		D86542652285D1D20004FAAD /* Release */ = {
+		D852498E228C91F00098F259 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -338,9 +345,10 @@
 			};
 			name = Release;
 		};
-		D86542672285D1D20004FAAD /* Debug */ = {
+		D8524990228C91F00098F259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,14 +366,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ft.Persistence;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D86542682285D1D20004FAAD /* Release */ = {
+		D8524991228C91F00098F259 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -388,9 +398,10 @@
 			};
 			name = Release;
 		};
-		D865426A2285D1D20004FAAD /* Debug */ = {
+		D8524993228C91F00098F259 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGY2RQ2389;
 				INFOPLIST_FILE = PersistenceTests/Info.plist;
@@ -406,9 +417,10 @@
 			};
 			name = Debug;
 		};
-		D865426B2285D1D20004FAAD /* Release */ = {
+		D8524994228C91F00098F259 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGY2RQ2389;
 				INFOPLIST_FILE = PersistenceTests/Info.plist;
@@ -427,34 +439,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D865424C2285D1D20004FAAD /* Build configuration list for PBXProject "Persistence" */ = {
+		D8524975228C91F00098F259 /* Build configuration list for PBXProject "Persistence" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D86542642285D1D20004FAAD /* Debug */,
-				D86542652285D1D20004FAAD /* Release */,
+				D852498D228C91F00098F259 /* Debug */,
+				D852498E228C91F00098F259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D86542662285D1D20004FAAD /* Build configuration list for PBXNativeTarget "Persistence" */ = {
+		D852498F228C91F00098F259 /* Build configuration list for PBXNativeTarget "Persistence" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D86542672285D1D20004FAAD /* Debug */,
-				D86542682285D1D20004FAAD /* Release */,
+				D8524990228C91F00098F259 /* Debug */,
+				D8524991228C91F00098F259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D86542692285D1D20004FAAD /* Build configuration list for PBXNativeTarget "PersistenceTests" */ = {
+		D8524992228C91F00098F259 /* Build configuration list for PBXNativeTarget "PersistenceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D865426A2285D1D20004FAAD /* Debug */,
-				D865426B2285D1D20004FAAD /* Release */,
+				D8524993228C91F00098F259 /* Debug */,
+				D8524994228C91F00098F259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D86542492285D1D20004FAAD /* Project object */;
+	rootObject = D8524972228C91F00098F259 /* Project object */;
 }
