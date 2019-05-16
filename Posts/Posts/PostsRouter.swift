@@ -12,9 +12,11 @@ import Common
 
 public class PostsRouter: Router {
     
-    public typealias Controller = UINavigationController
-    public var rootViewController = UINavigationController()
+    // Private
     let dataProvider: DataProvider
+    
+    // Public
+    public var rootViewController = UINavigationController()
     
     public init(dataProvider: DataProvider = DataProvider()) {
         self.dataProvider = dataProvider

@@ -9,7 +9,7 @@
 import Foundation
 
 public typealias Posts = [Post]
-public class Post: Codable {
+public struct Post: Codable {
     public let userId: Int?
     public let id: Int?
     public let title: String?

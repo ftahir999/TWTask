@@ -17,6 +17,7 @@ class PostsDetailsViewController: UIViewController {
     var post: Post! {
         didSet {
             viewModel.postVM = PostViewModel(model: post)
+            viewModel.dataProvider = DataProvider()
         }
     }
     

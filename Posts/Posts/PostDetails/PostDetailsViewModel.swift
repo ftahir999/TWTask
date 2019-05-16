@@ -15,14 +15,14 @@ class PostDetailsViewModel: NSObject {
     var postVM: PostViewModel?
     var comments = Dynamic([CommentViewModel]())
     var userViewModel: Dynamic<UserViewModel>?
-    weak var dataProvider: DataProvider?
+    var dataProvider: DataProvider!
     
     
     func fetchPostComments() {
         guard let postId = post.id else {
             return
         }
-        dataProvider?.fetchCommentsForPost(postId: postId) { (comments) in
+        dataProvider.fetchCommentsForPost(postId: postId) { (comments) in
             self.mapCommentsViewModels(comments: comments)
         }
     }
@@ -31,7 +31,7 @@ class PostDetailsViewModel: NSObject {
         guard let userId = post.userId else {
             return
         }
-        dataProvider?.fetchUserInfo(userId: userId){ (user) in
+        dataProvider.fetchUserInfo(userId: userId){ (user) in
             self.mapUserViewModel(user: user)
         }
     }
@@ -52,14 +52,15 @@ class PostDetailsViewModel: NSObject {
         guard let user = user else {
             return
         }
-        userViewModel?.value = UserViewModel(model: user)
+        userViewModel = Dynamic.init(UserViewModel(model: user))
     }
     
     override init() {
         super.init()
     }
     
-    init(post: Post) {
+    init(post: Post, dataProvider: DataProvider) {
+        self.dataProvider = dataProvider
         self.post = post
         self.postVM = PostViewModel(model: post)
         super.init()

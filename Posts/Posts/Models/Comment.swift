@@ -9,7 +9,7 @@
 import Foundation
 
 public typealias Comments = [Comment]
-public class Comment: Codable {
+public struct Comment: Codable {
     public let id: Int?
     public let postId: Int?
     public let name: String?

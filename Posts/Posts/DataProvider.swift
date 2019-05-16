@@ -77,17 +77,18 @@ public class DataProvider {
         }
     }
     
-    func saveModel<T: Codable>(model: T, fileName: String) {
+    public init() {}
+    
+    //Private Methods
+    private func saveModel<T: Codable>(model: T, fileName: String) {
         Persistence.shared.save(value: model, directory: .document, fileName: fileName)
     }
     
-    func loadSaveData<T: Codable>(fileName: String) -> T? {
+    private func loadSaveData<T: Codable>(fileName: String) -> T? {
         if let model: T = Persistence.shared.reterive(directory: .document, fileName: fileName) {
             return model
         }
         return nil
     }
-    
-    public init() {}
     
 }
