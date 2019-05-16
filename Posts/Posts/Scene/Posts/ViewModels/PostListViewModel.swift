@@ -19,8 +19,7 @@ class PostListViewModel {
         self.dataProvider = dataProvider
     }
     
-    func fetchAllPosts() {
-        
+    func fetchAllPosts() {        
         dataProvider?.fetchPosts() { (posts) in
             guard let posts = posts else {
                 return

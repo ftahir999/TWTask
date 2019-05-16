@@ -10,7 +10,6 @@ import Foundation
 
 struct DummyRequest: EndPointProvider {
     typealias ResponseDTO = DummyData
-    
     let path: String
     public var endpoint: Endpoint<ResponseDTO> {
         return Endpoint(method: .get,

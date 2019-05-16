@@ -13,7 +13,7 @@ import Common
 public class PostsRouter: Router {
     
     // Private
-    let dataProvider: DataProvider
+    private let dataProvider: DataProvider
     
     // Public
     public var rootViewController = UINavigationController()
@@ -24,10 +24,22 @@ public class PostsRouter: Router {
     
     public func start() {
         let controller = PostsViewController.instantiate()
+        controller.viewModel = PostListViewModel(dataProvider: dataProvider)
+        controller.router = self
         rootViewController.setViewControllers([controller], animated: true)
     }
+    
+    func pushPostDetailsVC(post: Post) {
+        let controller = PostsDetailsViewController.instantiate()
+        controller.viewModel = PostDetailsViewModel.init(post: post, dataProvider: dataProvider)
+        controller.router = self
+        rootViewController.pushViewController(controller, animated: true)
+    }
+    
     
     public func dismiss() {
         rootViewController.dismiss(animated: true, completion: nil)
     }
+    
+    
 }

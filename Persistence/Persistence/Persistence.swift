@@ -9,22 +9,31 @@
 import Foundation
 
 public class Persistence {
-    public static let shared = Persistence()
     
+    // Public
+    public static let shared = Persistence()
     public enum Directory {
         case document
         case cache
     }
     
-    public func save<T: Codable>(value: T, directory: Directory, fileName: String) {
+    @discardableResult
+    public func save<T: Encodable>(value: T, directory: Directory, fileName: String) -> Bool {
         let data = try? JSONEncoder().encode(value)
-        if let url = getFileURL(directory: directory, fileName: fileName) {
-            try? data?.write(to: url, options: .atomic)
+        guard let url = getFileURL(directory: directory, fileName: fileName) else {
+            return false
         }
         
+        do {
+            try data?.write(to: url, options: .atomic)
+        }
+        catch {
+            return false
+        }
+        return true
     }
     
-    public func reterive<T: Codable>(directory: Directory, fileName: String) -> T? {
+    public func reterive<T: Decodable>(directory: Directory, fileName: String) -> T? {
         if let url = getFileURL(directory: directory, fileName: fileName),
             let data = try? Data(contentsOf: url) {
             guard let value = try? JSONDecoder().decode(T.self, from: data) else {
@@ -35,8 +44,8 @@ public class Persistence {
         return nil
     }
     
-    public func getFileURL(directory: Directory, fileName: String) -> URL? {
-        let filePrefix = "file://"
+    // internal: For testing
+    func getFileURL(directory: Directory, fileName: String) -> URL? {
         var path: FileManager.SearchPathDirectory
         switch directory {
         case .document:
@@ -47,10 +56,6 @@ public class Persistence {
         
         if var url = FileManager.default.urls(for: path, in: .userDomainMask).first {
             url = url.appendingPathComponent(fileName, isDirectory: false)
-            if url.absoluteString.lowercased().prefix(filePrefix.count) != filePrefix {
-                let fixedUrlString = filePrefix + url.absoluteString
-                url = URL(string: fixedUrlString)!
-            }
             return url
         }
         return nil

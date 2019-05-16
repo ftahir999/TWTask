@@ -10,9 +10,9 @@ import Foundation
 
 public typealias Comments = [Comment]
 public struct Comment: Codable {
-    public let id: Int?
-    public let postId: Int?
-    public let name: String?
-    public let email: String?
-    public let body: String?
+    let id: Int?
+    let postId: Int?
+    let name: String?
+    let email: String?
+    let body: String?
 }

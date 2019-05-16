@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public protocol Router {
     var rootViewController: UINavigationController { get }
     func start()

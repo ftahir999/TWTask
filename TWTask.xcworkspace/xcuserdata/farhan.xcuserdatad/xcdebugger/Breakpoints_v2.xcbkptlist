@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Persistence/Persistence/Persistence.swift"
-            timestampString = "579711145.6394041"
+            filePath = "Posts/Posts/DataProvider.swift"
+            timestampString = "579736514.739749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "save(value:directory:fileName:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "fetchPosts(handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Persistence/Persistence/Persistence.swift"
-            timestampString = "579711145.63983"
+            filePath = "Persistence/PersistenceTests/Mock/MockPersistence.swift"
+            timestampString = "579736514.739917"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "save(value:directory:fileName:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getFileURL(directory:fileName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

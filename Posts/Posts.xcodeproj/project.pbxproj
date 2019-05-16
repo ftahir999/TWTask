@@ -12,7 +12,7 @@
 		D8524A13228D4E510098F259 /* Posts.h in Headers */ = {isa = PBXBuildFile; fileRef = D8524A05228D4E510098F259 /* Posts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8524A55228D572A0098F259 /* PostsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8524A54228D57290098F259 /* PostsViewController.storyboard */; };
 		D8524A5C228D576E0098F259 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A5A228D576E0098F259 /* PostTableViewCell.swift */; };
-		D8524A60228D57BF0098F259 /* PostDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8524A5F228D57BF0098F259 /* PostDetailsViewController.storyboard */; };
+		D8524A60228D57BF0098F259 /* PostsDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8524A5F228D57BF0098F259 /* PostsDetailsViewController.storyboard */; };
 		D8524A69228D57EB0098F259 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A68228D57EB0098F259 /* CommentTableViewCell.swift */; };
 		D8524A6F228D58190098F259 /* FetchPostCommentsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A6C228D58190098F259 /* FetchPostCommentsRequest.swift */; };
 		D8524A70228D58190098F259 /* FetchPostsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A6D228D58190098F259 /* FetchPostsRequest.swift */; };
@@ -54,8 +54,6 @@
 		D8524AC6228DB9040098F259 /* PostTests.json in Resources */ = {isa = PBXBuildFile; fileRef = D8524AC5228DB9040098F259 /* PostTests.json */; };
 		D8524AC8228DB9150098F259 /* UserTests.json in Resources */ = {isa = PBXBuildFile; fileRef = D8524AC7228DB9150098F259 /* UserTests.json */; };
 		D8524ACA228DBA320098F259 /* XCTestCase+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AC9228DBA320098F259 /* XCTestCase+Ext.swift */; };
-		D8524ACB228DBE090098F259 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A8A228D59D10098F259 /* DataProvider.swift */; };
-		D8524ACC228DBE0E0098F259 /* PostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A8C228D5A0F0098F259 /* PostsRouter.swift */; };
 		D8524ACD228DBE2E0098F259 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A80228D59840098F259 /* PostsViewController.swift */; };
 		D8524ACE228DBE450098F259 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A68228D57EB0098F259 /* CommentTableViewCell.swift */; };
 		D8524ACF228DBE450098F259 /* PostsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A84228D59AF0098F259 /* PostsDetailsViewController.swift */; };
@@ -63,6 +61,7 @@
 		D8524AD3228DC80D0098F259 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AD2228DC80D0098F259 /* MockDataProvider.swift */; };
 		D8524AD5228DD4430098F259 /* PostListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AD4228DD4420098F259 /* PostListViewModelTests.swift */; };
 		D8524AD7228DDC1A0098F259 /* PostDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AD6228DDC1A0098F259 /* PostDetailsViewModelTests.swift */; };
+		D8524ADC228DFD0A0098F259 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524ADB228DFD0A0098F259 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,7 @@
 		D8524A12228D4E510098F259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8524A54228D57290098F259 /* PostsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostsViewController.storyboard; sourceTree = "<group>"; };
 		D8524A5A228D576E0098F259 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		D8524A5F228D57BF0098F259 /* PostDetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostDetailsViewController.storyboard; sourceTree = "<group>"; };
+		D8524A5F228D57BF0098F259 /* PostsDetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PostsDetailsViewController.storyboard; sourceTree = "<group>"; };
 		D8524A68228D57EB0098F259 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		D8524A6C228D58190098F259 /* FetchPostCommentsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchPostCommentsRequest.swift; sourceTree = "<group>"; };
 		D8524A6D228D58190098F259 /* FetchPostsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchPostsRequest.swift; sourceTree = "<group>"; };
@@ -118,6 +117,7 @@
 		D8524AD2228DC80D0098F259 /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
 		D8524AD4228DD4420098F259 /* PostListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelTests.swift; sourceTree = "<group>"; };
 		D8524AD6228DDC1A0098F259 /* PostDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		D8524ADB228DFD0A0098F259 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,12 +165,12 @@
 		D8524A04228D4E510098F259 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				D8524A8C228D5A0F0098F259 /* PostsRouter.swift */,
-				D8524A8A228D59D10098F259 /* DataProvider.swift */,
-				D8524A51228D56720098F259 /* PostDetails */,
-				D8524A50228D566B0098F259 /* Posts */,
+				D8524ADA228DFB8D0098F259 /* Scene */,
 				D8524A53228D56800098F259 /* Models */,
 				D8524A52228D56780098F259 /* Requests */,
+				D8524A8C228D5A0F0098F259 /* PostsRouter.swift */,
+				D8524A8A228D59D10098F259 /* DataProvider.swift */,
+				D8524ADB228DFD0A0098F259 /* Constants.swift */,
 				D8524A05228D4E510098F259 /* Posts.h */,
 				D8524A06228D4E510098F259 /* Info.plist */,
 			);
@@ -180,10 +180,10 @@
 		D8524A0F228D4E510098F259 /* PostsTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8524AD1228DC7F60098F259 /* DataProvider */,
-				D8524AAB228DB1AE0098F259 /* ViewModels */,
-				D8524AAA228DB1A90098F259 /* Models */,
-				D8524AA9228DB1A00098F259 /* Requests */,
+				D8524AD1228DC7F60098F259 /* DataProviderTests */,
+				D8524AAB228DB1AE0098F259 /* ViewModelsTests */,
+				D8524AAA228DB1A90098F259 /* ModelsTests */,
+				D8524AA9228DB1A00098F259 /* RequestsTests */,
 				D8524A10228D4E510098F259 /* PostsTests.swift */,
 				D8524A12228D4E510098F259 /* Info.plist */,
 			);
@@ -193,11 +193,10 @@
 		D8524A50228D566B0098F259 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				D8524AD8228DFB2C0098F259 /* ViewModels */,
 				D8524A56228D57510098F259 /* Views */,
 				D8524A54228D57290098F259 /* PostsViewController.storyboard */,
 				D8524A80228D59840098F259 /* PostsViewController.swift */,
-				D8524A98228D5E190098F259 /* PostViewModel.swift */,
-				D8524A7E228D59700098F259 /* PostListViewModel.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -205,12 +204,10 @@
 		D8524A51228D56720098F259 /* PostDetails */ = {
 			isa = PBXGroup;
 			children = (
+				D8524AD9228DFB3C0098F259 /* ViewModel */,
 				D8524A6B228D57F00098F259 /* Views */,
-				D8524A5F228D57BF0098F259 /* PostDetailsViewController.storyboard */,
-				D8524A82228D59AF0098F259 /* PostDetailsViewModel.swift */,
 				D8524A84228D59AF0098F259 /* PostsDetailsViewController.swift */,
-				D8524A88228D59C40098F259 /* CommentViewModel.swift */,
-				D8524A83228D59AF0098F259 /* UserViewModel.swift */,
+				D8524A5F228D57BF0098F259 /* PostsDetailsViewController.storyboard */,
 			);
 			path = PostDetails;
 			sourceTree = "<group>";
@@ -261,17 +258,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D8524AA9228DB1A00098F259 /* Requests */ = {
+		D8524AA9228DB1A00098F259 /* RequestsTests */ = {
 			isa = PBXGroup;
 			children = (
 				D8524AAC228DB4680098F259 /* FetchPostCommentsRequestTests.swift */,
 				D8524AAE228DB5F90098F259 /* FetchPostsRequestTests.swift */,
 				D8524AB0228DB7040098F259 /* UserInfoRequestTests.swift */,
 			);
-			path = Requests;
+			path = RequestsTests;
 			sourceTree = "<group>";
 		};
-		D8524AAA228DB1A90098F259 /* Models */ = {
+		D8524AAA228DB1A90098F259 /* ModelsTests */ = {
 			isa = PBXGroup;
 			children = (
 				D8524AB2228DB79C0098F259 /* CommentTests.swift */,
@@ -282,24 +279,52 @@
 				D8524AC7228DB9150098F259 /* UserTests.json */,
 				D8524AC9228DBA320098F259 /* XCTestCase+Ext.swift */,
 			);
-			path = Models;
+			path = ModelsTests;
 			sourceTree = "<group>";
 		};
-		D8524AAB228DB1AE0098F259 /* ViewModels */ = {
+		D8524AAB228DB1AE0098F259 /* ViewModelsTests */ = {
 			isa = PBXGroup;
 			children = (
 				D8524AD4228DD4420098F259 /* PostListViewModelTests.swift */,
 				D8524AD6228DDC1A0098F259 /* PostDetailsViewModelTests.swift */,
 			);
-			path = ViewModels;
+			path = ViewModelsTests;
 			sourceTree = "<group>";
 		};
-		D8524AD1228DC7F60098F259 /* DataProvider */ = {
+		D8524AD1228DC7F60098F259 /* DataProviderTests */ = {
 			isa = PBXGroup;
 			children = (
 				D8524AD2228DC80D0098F259 /* MockDataProvider.swift */,
 			);
-			path = DataProvider;
+			path = DataProviderTests;
+			sourceTree = "<group>";
+		};
+		D8524AD8228DFB2C0098F259 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D8524A98228D5E190098F259 /* PostViewModel.swift */,
+				D8524A7E228D59700098F259 /* PostListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D8524AD9228DFB3C0098F259 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D8524A82228D59AF0098F259 /* PostDetailsViewModel.swift */,
+				D8524A88228D59C40098F259 /* CommentViewModel.swift */,
+				D8524A83228D59AF0098F259 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D8524ADA228DFB8D0098F259 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				D8524A50228D566B0098F259 /* Posts */,
+				D8524A51228D56720098F259 /* PostDetails */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,7 +420,7 @@
 			files = (
 				D8524A55228D572A0098F259 /* PostsViewController.storyboard in Resources */,
 				D8524A9B228D63520098F259 /* Assets.xcassets in Resources */,
-				D8524A60228D57BF0098F259 /* PostDetailsViewController.storyboard in Resources */,
+				D8524A60228D57BF0098F259 /* PostsDetailsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +458,7 @@
 				D8524A81228D59840098F259 /* PostsViewController.swift in Sources */,
 				D8524A6F228D58190098F259 /* FetchPostCommentsRequest.swift in Sources */,
 				D8524A5C228D576E0098F259 /* PostTableViewCell.swift in Sources */,
+				D8524ADC228DFD0A0098F259 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +468,6 @@
 			files = (
 				D8524AB1228DB7040098F259 /* UserInfoRequestTests.swift in Sources */,
 				D8524AB3228DB79C0098F259 /* CommentTests.swift in Sources */,
-				D8524ACB228DBE090098F259 /* DataProvider.swift in Sources */,
 				D8524ACE228DBE450098F259 /* CommentTableViewCell.swift in Sources */,
 				D8524AC2228DB7F00098F259 /* PostListViewModel.swift in Sources */,
 				D8524AAF228DB5F90098F259 /* FetchPostsRequestTests.swift in Sources */,
@@ -464,7 +489,6 @@
 				D8524ACD228DBE2E0098F259 /* PostsViewController.swift in Sources */,
 				D8524ABA228DB7D50098F259 /* User.swift in Sources */,
 				D8524ABD228DB7DB0098F259 /* UserInfoRequest.swift in Sources */,
-				D8524ACC228DBE0E0098F259 /* PostsRouter.swift in Sources */,
 				D8524AD7228DDC1A0098F259 /* PostDetailsViewModelTests.swift in Sources */,
 				D8524AB5228DB7AD0098F259 /* PostTests.swift in Sources */,
 				D8524ABB228DB7DB0098F259 /* FetchPostCommentsRequest.swift in Sources */,

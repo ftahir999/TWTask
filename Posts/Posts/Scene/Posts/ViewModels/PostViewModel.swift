@@ -9,14 +9,16 @@
 import Foundation
 import Network
 
-class PostViewModel {
+struct PostViewModel {
     let model: Post
-    let title: String
-    let detail: String
+    var title: String {
+        return model.title ?? "Not Available"
+    }
+    var detail: String {
+        return model.body ?? "Not Available"
+    }
     
     init(model: Post) {
         self.model = model
-        title = model.title ?? "Not Available"
-        detail = model.body ?? "Not Available"
     }
 }

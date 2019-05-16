@@ -11,12 +11,12 @@ import XCTest
 
 class PostDetailsViewModelTests: XCTestCase {
     
-    let dataProvider = MockDataProvider()
-    var viewModel: PostDetailsViewModel = PostDetailsViewModel()
+    var viewModel: PostDetailsViewModel!
     
     override func setUp() {
-        viewModel.dataProvider = dataProvider
-        viewModel.post = Post(userId: 1, id: 1, title: "", body: "")
+        let dataProvider = MockDataProvider()
+        let post = Post(userId: 1, id: 1, title: "", body: "")
+        viewModel = PostDetailsViewModel.init(post: post, dataProvider: dataProvider)
     }
     
     func testCommentsReceived() {

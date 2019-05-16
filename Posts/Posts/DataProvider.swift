@@ -17,11 +17,18 @@ public typealias UserInfoHandler = (User?) -> ()
 public class DataProvider {
     
     func fetchPosts(handler: @escaping AllPostsHandler) {
-        let fileName = "Posts.json"
+        let fileName = FilePath.posts.path()
+        let cachedModel: Posts? = self.loadSaveData(fileName: fileName)
+        handler(cachedModel)
+        return
         let request = FetchPostsRequest()
-        NetworkManager.shared.request(request: request) { (response) in
+        NetworkManager.shared.request(request: request) { [weak self] (response) in
             switch response {
             case .success(let dto):
+                guard let self = self else {
+                    return
+                }
+                
                 guard let dto = dto else {
                     let cachedModel: Posts? = self.loadSaveData(fileName: fileName)
                     handler(cachedModel)
@@ -37,12 +44,14 @@ public class DataProvider {
     }
     
     func fetchCommentsForPost(postId: Int, handler: @escaping PostCommentsHandler) {
-        let fileName = "Comments_\(postId).json"
+        let fileName = FilePath.postComments(postId: postId).path()
         let request = FetchPostCommentsRequest(postId: postId)
-        NetworkManager.shared.request(request: request) { (response) in
+        NetworkManager.shared.request(request: request) { [weak self] (response) in
             switch response {
             case .success(let dto):
-                
+                guard let self = self else {
+                    return
+                }
                 guard let dto = dto else {
                     let cachedModel: Comments? = self.loadSaveData(fileName: fileName)
                     handler(cachedModel)
@@ -58,11 +67,15 @@ public class DataProvider {
     }
     
     func fetchUserInfo(userId: Int, handler: @escaping UserInfoHandler) {
-        let fileName = "User_\(userId).json"
+        let fileName = FilePath.userInfo(userId: userId).path()
         let request = UserInfoRequest(userId: userId)
-        NetworkManager.shared.request(request: request) { (response) in
+        NetworkManager.shared.request(request: request) { [weak self] (response) in
             switch response {
             case .success(let dto):
+                guard let self = self else {
+                    return
+                }
+                
                 guard let dto = dto else {
                     let cachedModel: User? = self.loadSaveData(fileName: fileName)
                     handler(cachedModel)

@@ -13,7 +13,7 @@ public class UserInfoRequest: EndPointProvider {
     public typealias ResponseDTO = User
     
     public var endpoint: Endpoint<ResponseDTO> {
-        let path = "/users/\(userId)"
+        let path = RequestPath.userInfo(userId: userId).path()
         return Endpoint(method: .get,
                         path: path, query: [:], body: nil)
     }

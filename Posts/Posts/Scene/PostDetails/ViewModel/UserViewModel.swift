@@ -8,15 +8,16 @@
 
 import Foundation
 
-class UserViewModel {
+struct UserViewModel {
     let model: User
-    let name: String
-    let email: String
+    var name: String {
+        return model.name ?? "Not Available"
+    }
+    var email: String {
+        return model.email ?? "Not Available"
+    }
     
     init(model: User) {
         self.model = model
-        name = model.name ?? "Not Available"
-        email = model.email ?? "Not Available"
-        
     }
 }

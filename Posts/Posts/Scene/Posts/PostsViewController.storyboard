@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Daily Posts-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="PostsViewController" id="BYZ-38-t0r" customClass="PostsViewController" customModule="Posts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-f0-5t1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="101" id="rpH-KY-htG" customClass="PostTableViewCell" customModule="Posts" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rpH-KY-htG" id="BxA-ax-jsz">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="100.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-rJ-bdk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="100.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dasfasdkfaksfjalksjdfklasf" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANg-6D-LKu">
+                                                            <rect key="frame" x="16" y="16" width="344" height="20.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeP-DP-Dfq">
+                                                            <rect key="frame" x="16" y="44.5" width="344" height="40"/>
+                                                            <string key="text">Labelasdfashfdkjasdh ahsdfhakjsdfhak sdhfkajsdhfk askjdfhkaj dhfjkash fjahsfdkj hajksdfhjkashfjkashfjkha kfhaskjf ahkjsfhk jahsdfkjla</string>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Pa-rJ-bdk" firstAttribute="top" secondItem="BxA-ax-jsz" secondAttribute="top" id="U18-fn-OuP"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Pa-rJ-bdk" secondAttribute="trailing" id="aCT-AK-L4k"/>
+                                                <constraint firstAttribute="bottom" secondItem="6Pa-rJ-bdk" secondAttribute="bottom" id="aj8-Cu-WgD"/>
+                                                <constraint firstItem="6Pa-rJ-bdk" firstAttribute="leading" secondItem="BxA-ax-jsz" secondAttribute="leading" id="luH-Ut-dzK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="SeP-DP-Dfq" id="i1s-RS-tHX"/>
+                                            <outlet property="titleLabel" destination="ANg-6D-LKu" id="hZa-8c-C4l"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="irq-gj-q7I"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2wk-c6-XTn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fh6-f0-5t1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1Kv-kA-Gz9"/>
+                            <constraint firstItem="Fh6-f0-5t1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kxf-1B-VrA"/>
+                            <constraint firstItem="Fh6-f0-5t1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aWR-xy-bMa"/>
+                            <constraint firstItem="Fh6-f0-5t1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gWp-l9-358"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Daily Posts" id="bai-rW-ZK4"/>
+                    <connections>
+                        <outlet property="tableView" destination="Fh6-f0-5t1" id="XBy-i6-pYh"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="21.428571428571427"/>
+        </scene>
+    </scenes>
+</document>

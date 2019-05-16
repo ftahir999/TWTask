@@ -13,7 +13,7 @@ public class FetchPostCommentsRequest: EndPointProvider {
     public typealias ResponseDTO = Comments
     
     public var endpoint: Endpoint<ResponseDTO> {
-        let path = "/posts/\(postId)/comments"
+        let path = RequestPath.postComments(postId: postId).path()
         return Endpoint(method: .get,
                         path: path, query: [:], body: nil)
     }

@@ -12,6 +12,7 @@
 		D852498C228C91F00098F259 /* Persistence.h in Headers */ = {isa = PBXBuildFile; fileRef = D852497E228C91F00098F259 /* Persistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D85249C8228C960F0098F259 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249C7228C960F0098F259 /* Persistence.swift */; };
 		D85249C9228C960F0098F259 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249C7228C960F0098F259 /* Persistence.swift */; };
+		D8524AE1228E10330098F259 /* MockPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AE0228E10330098F259 /* MockPersistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		D8524989228C91F00098F259 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
 		D852498B228C91F00098F259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D85249C7228C960F0098F259 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D8524AE0228E10330098F259 /* MockPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +86,19 @@
 		D8524988228C91F00098F259 /* PersistenceTests */ = {
 			isa = PBXGroup;
 			children = (
+				D8524ADF228E10130098F259 /* Mock */,
 				D8524989228C91F00098F259 /* PersistenceTests.swift */,
 				D852498B228C91F00098F259 /* Info.plist */,
 			);
 			path = PersistenceTests;
+			sourceTree = "<group>";
+		};
+		D8524ADF228E10130098F259 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D8524AE0228E10330098F259 /* MockPersistence.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D852498A228C91F00098F259 /* PersistenceTests.swift in Sources */,
+				D8524AE1228E10330098F259 /* MockPersistence.swift in Sources */,
 				D85249C9228C960F0098F259 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,16 +8,19 @@
 
 import Foundation
 
-class CommentViewModel {
+struct CommentViewModel {
     let model: Comment
-    let name: String
-    let email: String
-    let comment: String
+    var name: String {
+        return model.name ?? "Not Available"
+    }
+    var email: String {
+        return model.email ?? "Not Available"
+    }
+    var comment: String {
+        return model.body ?? "Not Available"
+    }
     
     init(model: Comment) {
         self.model = model
-        name = model.name ?? "Not Available"
-        email = model.email ?? "Not Available"
-        comment = model.body ?? "Not Available"
     }
 }

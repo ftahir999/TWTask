@@ -12,10 +12,14 @@ import XCTest
 
 class PostListViewModelTests: XCTestCase {
     
-    let dataProvider = MockDataProvider()
+    var viewModel: PostListViewModel!
+    
+    override func setUp() {
+        let dataProvider = MockDataProvider()
+        viewModel = PostListViewModel.init(dataProvider: dataProvider)
+    }
     
     func testPostsReceived() {
-        let viewModel = PostListViewModel.init(dataProvider: dataProvider)
         viewModel.fetchAllPosts()
         XCTAssertTrue(viewModel.postsVMs.value.count == 100)
         let firstVM = viewModel.postsVMs.value.first

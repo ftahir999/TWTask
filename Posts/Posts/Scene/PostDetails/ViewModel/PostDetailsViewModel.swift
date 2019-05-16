@@ -10,12 +10,12 @@ import Foundation
 import Networking
 import Common
 
-class PostDetailsViewModel: NSObject {
-    var post: Post!
+class PostDetailsViewModel {
     var postVM: PostViewModel?
     var comments = Dynamic([CommentViewModel]())
     var userViewModel: Dynamic<UserViewModel>?
     var dataProvider: DataProvider!
+    var post: Post!
     
     
     func fetchPostComments() {
@@ -55,15 +55,10 @@ class PostDetailsViewModel: NSObject {
         userViewModel = Dynamic.init(UserViewModel(model: user))
     }
     
-    override init() {
-        super.init()
-    }
-    
     init(post: Post, dataProvider: DataProvider) {
         self.dataProvider = dataProvider
         self.post = post
         self.postVM = PostViewModel(model: post)
-        super.init()
     }
     
 }

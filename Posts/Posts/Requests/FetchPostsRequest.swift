@@ -12,9 +12,10 @@ import Networking
 public class FetchPostsRequest: EndPointProvider {
     public typealias ResponseDTO = Posts
     
+    let path = RequestPath.posts.path()
     public var endpoint: Endpoint<ResponseDTO> {
         return Endpoint(method: .get,
-                        path: "/posts", query: [:], body: nil)
+                        path: path, query: [:], body: nil)
     }
     
     public init() {

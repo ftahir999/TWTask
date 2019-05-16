@@ -7,30 +7,25 @@
 //
 
 import UIKit
+import Common
 
-class PostsDetailsViewController: UIViewController {
-    let viewModel = PostDetailsViewModel()
+class PostsDetailsViewController: UIViewController, Instantiatable {
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postDetailsViewModel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    var post: Post! {
-        didSet {
-            viewModel.postVM = PostViewModel(model: post)
-            viewModel.dataProvider = DataProvider()
-        }
-    }
+    
+    var viewModel: PostDetailsViewModel!
+    var router: PostsRouter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        setPostInfo()
-        setUserInfo()
-        setComments()
+        displayUserInfo()
+        displayComments()
+        displayPostDetails()
     }
     
-    func setUserInfo() {
+    private func displayUserInfo() {
         viewModel.userViewModel?.bind { [weak self] in
             
             self?.userEmailLabel.text = self?.viewModel.userViewModel?.value.email
@@ -38,23 +33,18 @@ class PostsDetailsViewController: UIViewController {
         viewModel.fetchUserInfo()
     }
     
-    func setComments() {
+    private func displayComments() {
         viewModel.comments.bind { [weak self] in
             self?.tableView.reloadData()
         }
         viewModel.fetchPostComments()
-        
     }
     
-    func setPostInfo() {
+    private func displayPostDetails() {
         self.postTitleLabel.text = viewModel.postVM?.title
         self.postDetailsViewModel.text = viewModel.postVM?.detail
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
+   
 }
 
 extension PostsDetailsViewController: UITableViewDataSource {
