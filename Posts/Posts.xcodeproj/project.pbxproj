@@ -165,7 +165,7 @@
 		D8524A04228D4E510098F259 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				D8524ADA228DFB8D0098F259 /* Scene */,
+				D8524ADA228DFB8D0098F259 /* Scenes */,
 				D8524A53228D56800098F259 /* Models */,
 				D8524A52228D56780098F259 /* Requests */,
 				D8524A8C228D5A0F0098F259 /* PostsRouter.swift */,
@@ -318,13 +318,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		D8524ADA228DFB8D0098F259 /* Scene */ = {
+		D8524ADA228DFB8D0098F259 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				D8524A50228D566B0098F259 /* Posts */,
 				D8524A51228D56720098F259 /* PostDetails */,
 			);
-			path = Scene;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
