@@ -5,6 +5,12 @@
       location = "group:TWTask/TWTask.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Posts/Posts.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Common/Common.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Persistence/Persistence.xcodeproj">
    </FileRef>
    <FileRef

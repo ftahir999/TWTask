@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D8524961228C90590098F259 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8524957228C90590098F259 /* Networking.framework */; };
-		D8524966228C90590098F259 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524965228C90590098F259 /* NetworkingTests.swift */; };
+		D8524966228C90590098F259 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524965228C90590098F259 /* NetworkManagerTests.swift */; };
 		D8524968228C90590098F259 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = D852495A228C90590098F259 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D85249BF228C95E00098F259 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BB228C95E00098F259 /* EndPoint.swift */; };
 		D85249C0228C95E00098F259 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BB228C95E00098F259 /* EndPoint.swift */; };
@@ -20,6 +20,12 @@
 		D85249C6228C95E00098F259 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249BE228C95E00098F259 /* NetworkManager.swift */; };
 		D85249EF228CB3820098F259 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249EE228CB3820098F259 /* Environment.swift */; };
 		D85249F0228CB3820098F259 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249EE228CB3820098F259 /* Environment.swift */; };
+		D8524A9E228D78B60098F259 /* Endpoint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A9D228D78B60098F259 /* Endpoint+Ext.swift */; };
+		D8524AA1228D99B50098F259 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AA0228D99B50098F259 /* MockNetworkManager.swift */; };
+		D8524AA2228D9C170098F259 /* Endpoint+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A9D228D78B60098F259 /* Endpoint+Ext.swift */; };
+		D8524AA4228D9FE00098F259 /* DummyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AA3228D9FE00098F259 /* DummyEndpoint.swift */; };
+		D8524AA6228D9FED0098F259 /* DummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AA5228D9FED0098F259 /* DummyResponse.swift */; };
+		D8524AA8228DABD60098F259 /* EnvoirnmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AA7228DABD60098F259 /* EnvoirnmentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +43,18 @@
 		D852495A228C90590098F259 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		D852495B228C90590098F259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8524960228C90590098F259 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8524965228C90590098F259 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		D8524965228C90590098F259 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		D8524967228C90590098F259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D85249BB228C95E00098F259 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		D85249BC228C95E00098F259 /* NetworkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		D85249BD228C95E00098F259 /* EndPointProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointProvider.swift; sourceTree = "<group>"; };
 		D85249BE228C95E00098F259 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D85249EE228CB3820098F259 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D8524A9D228D78B60098F259 /* Endpoint+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Ext.swift"; sourceTree = "<group>"; };
+		D8524AA0228D99B50098F259 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		D8524AA3228D9FE00098F259 /* DummyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyEndpoint.swift; sourceTree = "<group>"; };
+		D8524AA5228D9FED0098F259 /* DummyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyResponse.swift; sourceTree = "<group>"; };
+		D8524AA7228DABD60098F259 /* EnvoirnmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvoirnmentTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +97,7 @@
 		D8524959228C90590098F259 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D8524A9C228D78A20098F259 /* Extension */,
 				D85249BA228C95A50098F259 /* Core */,
 				D852495A228C90590098F259 /* Networking.h */,
 				D852495B228C90590098F259 /* Info.plist */,
@@ -96,7 +108,9 @@
 		D8524964228C90590098F259 /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				D8524965228C90590098F259 /* NetworkingTests.swift */,
+				D8524A9F228D99940098F259 /* Mock */,
+				D8524965228C90590098F259 /* NetworkManagerTests.swift */,
+				D8524AA7228DABD60098F259 /* EnvoirnmentTests.swift */,
 				D8524967228C90590098F259 /* Info.plist */,
 			);
 			path = NetworkingTests;
@@ -112,6 +126,24 @@
 				D85249EE228CB3820098F259 /* Environment.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		D8524A9C228D78A20098F259 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D8524A9D228D78B60098F259 /* Endpoint+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D8524A9F228D99940098F259 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D8524AA0228D99B50098F259 /* MockNetworkManager.swift */,
+				D8524AA3228D9FE00098F259 /* DummyEndpoint.swift */,
+				D8524AA5228D9FED0098F259 /* DummyResponse.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +259,7 @@
 				D85249C3228C95E00098F259 /* EndPointProvider.swift in Sources */,
 				D85249BF228C95E00098F259 /* EndPoint.swift in Sources */,
 				D85249C1228C95E00098F259 /* NetworkTask.swift in Sources */,
+				D8524A9E228D78B60098F259 /* Endpoint+Ext.swift in Sources */,
 				D85249EF228CB3820098F259 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,12 +268,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8524AA8228DABD60098F259 /* EnvoirnmentTests.swift in Sources */,
 				D85249C0228C95E00098F259 /* EndPoint.swift in Sources */,
 				D85249F0228CB3820098F259 /* Environment.swift in Sources */,
+				D8524AA2228D9C170098F259 /* Endpoint+Ext.swift in Sources */,
 				D85249C4228C95E00098F259 /* EndPointProvider.swift in Sources */,
 				D85249C6228C95E00098F259 /* NetworkManager.swift in Sources */,
+				D8524AA1228D99B50098F259 /* MockNetworkManager.swift in Sources */,
 				D85249C2228C95E00098F259 /* NetworkTask.swift in Sources */,
-				D8524966228C90590098F259 /* NetworkingTests.swift in Sources */,
+				D8524AA4228D9FE00098F259 /* DummyEndpoint.swift in Sources */,
+				D8524966228C90590098F259 /* NetworkManagerTests.swift in Sources */,
+				D8524AA6228D9FED0098F259 /* DummyResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
