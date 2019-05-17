@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Network
 
 struct PostViewModel {
     let model: Post

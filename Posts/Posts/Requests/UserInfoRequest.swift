@@ -10,6 +10,8 @@ import Foundation
 import Networking
 
 public class UserInfoRequest: EndPointProvider {
+    
+    private let userId: Int    
     public typealias ResponseDTO = User
     
     public var endpoint: Endpoint<ResponseDTO> {
@@ -18,7 +20,6 @@ public class UserInfoRequest: EndPointProvider {
                         path: path, query: [:], body: nil)
     }
     
-    private let userId: Int
     public init(userId: Int) {
         self.userId = userId
     }

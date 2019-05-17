@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Networking
 import Common
 
 class PostDetailsViewModel {

@@ -10,6 +10,8 @@ import Foundation
 import Networking
 
 public class FetchPostCommentsRequest: EndPointProvider {
+    
+    private let postId: Int    
     public typealias ResponseDTO = Comments
     
     public var endpoint: Endpoint<ResponseDTO> {
@@ -18,7 +20,6 @@ public class FetchPostCommentsRequest: EndPointProvider {
                         path: path, query: [:], body: nil)
     }
     
-    private let postId: Int
     public init(postId: Int) {
       self.postId = postId
     }

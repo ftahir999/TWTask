@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Networking
-import Persistence
 import Common
 
 class PostListViewModel {
