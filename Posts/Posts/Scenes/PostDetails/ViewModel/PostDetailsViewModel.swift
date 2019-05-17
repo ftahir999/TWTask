@@ -11,19 +11,21 @@ import Networking
 import Common
 
 class PostDetailsViewModel {
+    var post: Post!
     var postVM: PostViewModel?
     var comments: Dynamic<[CommentViewModel]> = Dynamic([CommentViewModel]())
     var userViewModel: Dynamic<UserViewModel> = Dynamic(UserViewModel.init(model: User(id: 0, name: "", email: "", phone: "")))
     var dataProvider: DataProvider!
-    var post: Post!
-    
+    var isLoadingComments = Dynamic(false)
     
     func fetchPostComments() {
+        isLoadingComments.value = true
         guard let postId = post.id else {
             return
         }
-        dataProvider.fetchCommentsForPost(postId: postId) { (comments) in
-            self.mapCommentsViewModels(comments: comments)
+        dataProvider.fetchCommentsForPost(postId: postId) { [weak self] (comments) in
+            self?.isLoadingComments.value = false
+            self?.mapCommentsViewModels(comments: comments)
         }
     }
     
@@ -31,12 +33,19 @@ class PostDetailsViewModel {
         guard let userId = post.userId else {
             return
         }
-        dataProvider.fetchUserInfo(userId: userId){ (user) in
-            self.mapUserViewModel(user: user)
+        dataProvider.fetchUserInfo(userId: userId){ [weak self] (user) in
+            self?.mapUserViewModel(user: user)
         }
     }
     
-    func mapCommentsViewModels(comments: [Comment]?) {
+    init(post: Post, dataProvider: DataProvider) {
+        self.dataProvider = dataProvider
+        self.post = post
+        self.postVM = PostViewModel(model: post)
+    }
+    
+    // Private
+    private func mapCommentsViewModels(comments: [Comment]?) {
         guard let comments = comments else {
             return
         }
@@ -48,17 +57,11 @@ class PostDetailsViewModel {
         self.comments.value += commentVMs
     }
     
-    func mapUserViewModel(user: User?) {
+    private func mapUserViewModel(user: User?) {
         guard let user = user else {
             return
         }
         userViewModel.value = UserViewModel(model: user)
-    }
-    
-    init(post: Post, dataProvider: DataProvider) {
-        self.dataProvider = dataProvider
-        self.post = post
-        self.postVM = PostViewModel(model: post)
     }
     
 }

@@ -14,17 +14,45 @@ class PostsViewController: UIViewController, Instantiatable {
     @IBOutlet weak var tableView: UITableView!
     var viewModel: PostListViewModel!
     var router: PostsRouter!
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayAllPosts()
+        fetchAllPosts()
     }
     
-    private func displayAllPosts() {
+    // Private
+    private func fetchAllPosts() {
         viewModel.postsVMs.bind { [weak self] (_) in
             self?.tableView.reloadData()
         }
+        viewModel.isLoadingData.bind { [weak self] in
+            $0 ? self?.displayActivityIndicator() : self?.hideActivityIndicator()
+        }
+        
+        viewModel.displayErrorMessage.bind { [weak self] (_) in
+            self?.displayPostsNotAvailableErrorMessage()
+        }
         viewModel.fetchAllPosts()
+    }
+    
+    private func displayActivityIndicator() {
+        view.addSubview(activityIndicator)
+        activityIndicator.frame = view.bounds
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideActivityIndicator() {
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
+    }
+    
+    private func displayPostsNotAvailableErrorMessage() {
+        let errorMessage = viewModel.getPostsNotAvailableErrorMessage()
+        let controller = UIAlertController.init(title: errorMessage.title, message: errorMessage.message, preferredStyle: .alert)
+        let action = UIAlertAction.init(title: errorMessage.actionText, style: .default, handler: nil)
+        controller.addAction(action)
+        self.present(controller, animated: true, completion: nil)
     }
 
 }
@@ -36,12 +64,12 @@ extension PostsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as? PostTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: String.init(describing: PostTableViewCell.self), for: indexPath) as? PostTableViewCell {
             let viewModel = self.viewModel.postsVMs.value[indexPath.row]
             cell.bindViewModel(viewModel: viewModel)
             return cell
         }
-        assertionFailure("Cell Wasn't Deqeue")
+        assertionFailure("PostTableViewCell wasn't deqeue")
         return UITableViewCell()
     }
 }

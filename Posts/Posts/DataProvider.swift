@@ -16,10 +16,13 @@ public typealias UserInfoHandler = (User?) -> ()
 
 public class DataProvider {
     
+    private let networkingManager: NetworkManager
+    private let persistence: Persistence
+    
     func fetchPosts(handler: @escaping AllPostsHandler) {
         let fileName = FilePath.posts.path()
         let request = FetchPostsRequest()
-        NetworkManager.shared.request(request: request) { [weak self] (response) in
+        networkingManager.request(request: request) { [weak self] (response) in
             switch response {
             case .success(let dto):
                 guard let self = self else {
@@ -43,7 +46,7 @@ public class DataProvider {
     func fetchCommentsForPost(postId: Int, handler: @escaping PostCommentsHandler) {
         let fileName = FilePath.postComments(postId: postId).path()
         let request = FetchPostCommentsRequest(postId: postId)
-        NetworkManager.shared.request(request: request) { [weak self] (response) in
+        networkingManager.request(request: request) { [weak self] (response) in
             switch response {
             case .success(let dto):
                 guard let self = self else {
@@ -66,7 +69,7 @@ public class DataProvider {
     func fetchUserInfo(userId: Int, handler: @escaping UserInfoHandler) {
         let fileName = FilePath.userInfo(userId: userId).path()
         let request = UserInfoRequest(userId: userId)
-        NetworkManager.shared.request(request: request) { [weak self] (response) in
+        networkingManager.request(request: request) { [weak self] (response) in
             switch response {
             case .success(let dto):
                 guard let self = self else {
@@ -87,15 +90,18 @@ public class DataProvider {
         }
     }
     
-    public init() {}
+    public init(networkingManager: NetworkManager, persistence: Persistence) {
+        self.networkingManager = networkingManager
+        self.persistence = persistence
+    }
     
     //Private Methods
     private func saveModel<T: Codable>(model: T, fileName: String) {
-        Persistence.shared.save(value: model, directory: .document, fileName: fileName)
+        persistence.save(value: model, directory: .document, fileName: fileName)
     }
     
     private func loadSaveData<T: Codable>(fileName: String) -> T? {
-        if let model: T = Persistence.shared.reterive(directory: .document, fileName: fileName) {
+        if let model: T = persistence.reterive(directory: .document, fileName: fileName) {
             return model
         }
         return nil

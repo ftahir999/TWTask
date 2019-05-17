@@ -18,7 +18,7 @@ public class PostsRouter: Router {
     // Public
     public var rootViewController = UINavigationController()
     
-    public init(dataProvider: DataProvider = DataProvider()) {
+    public init(dataProvider: DataProvider) {
         self.dataProvider = dataProvider
     }
     

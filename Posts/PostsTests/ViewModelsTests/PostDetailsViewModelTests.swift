@@ -8,15 +8,18 @@
 import Foundation
 import XCTest
 @testable import Posts
+@testable import Networking
+@testable import Persistence
 
 class PostDetailsViewModelTests: XCTestCase {
     
     var viewModel: PostDetailsViewModel!
     
     override func setUp() {
-        let dataProvider = MockDataProvider()
+        NetworkManager.setNetworkEnvironment(envoirnment: .getProdEnvironment())
+        let dataProvider = MockDataProvider(networkingManager: NetworkManager.shared, persistence: Persistence.shared)
         let post = Post(userId: 1, id: 1, title: "", body: "")
-        viewModel = PostDetailsViewModel.init(post: post, dataProvider: dataProvider)
+        viewModel = PostDetailsViewModel(post: post, dataProvider: dataProvider)
     }
     
     func testCommentsReceived() {

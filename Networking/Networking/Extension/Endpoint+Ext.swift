@@ -10,20 +10,20 @@ import Foundation
 
 extension Endpoint {
     private func url() -> URL? {
+        let envoirnment = NetworkManager.getNetworkEnvironment()
         var componets = URLComponents()
-        componets.scheme = NetworkManager.shared.envoirnment.scheme
-        componets.host = NetworkManager.shared.envoirnment.host
+        componets.scheme = envoirnment.scheme
+        componets.host = envoirnment.host
         componets.path = path
         
-        if !NetworkManager.shared.envoirnment.commonHeaders.isEmpty {
-            componets.queryItems = NetworkManager.shared.envoirnment.commonHeaders.map { URLQueryItem(name: $0, value: $1) }
+        if !envoirnment.commonHeaders.isEmpty {
+            componets.queryItems = envoirnment.commonHeaders.map { URLQueryItem(name: $0, value: $1) }
         }
         
         if !query.isEmpty {
             componets.queryItems = query.map { URLQueryItem(name: $0, value: $1) }
         }
         return componets.url
-        
     }
     
     public func asURLRequest() -> URLRequest? {

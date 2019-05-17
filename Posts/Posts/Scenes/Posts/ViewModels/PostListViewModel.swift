@@ -13,22 +13,35 @@ import Common
 
 class PostListViewModel {
     var postsVMs = Dynamic([PostViewModel]())
+    var isLoadingData = Dynamic(false)
+    var displayErrorMessage = Dynamic(false)
     var dataProvider: DataProvider?
     
     init(dataProvider: DataProvider) {
         self.dataProvider = dataProvider
     }
     
-    func fetchAllPosts() {        
-        dataProvider?.fetchPosts() { (posts) in
+    func fetchAllPosts() {
+        isLoadingData.value = true
+        dataProvider?.fetchPosts() { [weak self] (posts) in
+            guard let self = self else {
+                return
+            }
+            self.isLoadingData.value = false
             guard let posts = posts else {
+                self.displayErrorMessage.value = true
                 return
             }
             self.mapToViewModels(posts: posts)
         }
     }
     
-    func mapToViewModels(posts: [Post]) {
+    func getPostsNotAvailableErrorMessage() -> (title: String, message: String, actionText: String) {
+        return (title: "Posts Not Available", message: "We are unable to get latest posts at the moment, please try later!", actionText: "Ok")
+    }
+    
+    // Private    
+    private func mapToViewModels(posts: [Post]) {
         var postVMs: [PostViewModel] = []
         for post in posts {
             let viewModel = PostViewModel(model: post)

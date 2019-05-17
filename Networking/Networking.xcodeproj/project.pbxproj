@@ -26,6 +26,8 @@
 		D8524AA4228D9FE00098F259 /* DummyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AA3228D9FE00098F259 /* DummyEndpoint.swift */; };
 		D8524AA6228D9FED0098F259 /* DummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AA5228D9FED0098F259 /* DummyResponse.swift */; };
 		D8524AA8228DABD60098F259 /* EnvoirnmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AA7228DABD60098F259 /* EnvoirnmentTests.swift */; };
+		D8524AE6228EB04B0098F259 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AE5228EB04A0098F259 /* Reachability.swift */; };
+		D8524AE7228EB1D50098F259 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AE5228EB04A0098F259 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		D8524AA3228D9FE00098F259 /* DummyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyEndpoint.swift; sourceTree = "<group>"; };
 		D8524AA5228D9FED0098F259 /* DummyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyResponse.swift; sourceTree = "<group>"; };
 		D8524AA7228DABD60098F259 /* EnvoirnmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvoirnmentTests.swift; sourceTree = "<group>"; };
+		D8524AE5228EB04A0098F259 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 				D85249BE228C95E00098F259 /* NetworkManager.swift */,
 				D85249BC228C95E00098F259 /* NetworkTask.swift */,
 				D85249EE228CB3820098F259 /* Environment.swift */,
+				D8524AE5228EB04A0098F259 /* Reachability.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -255,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8524AE6228EB04B0098F259 /* Reachability.swift in Sources */,
 				D85249C5228C95E00098F259 /* NetworkManager.swift in Sources */,
 				D85249C3228C95E00098F259 /* EndPointProvider.swift in Sources */,
 				D85249BF228C95E00098F259 /* EndPoint.swift in Sources */,
@@ -270,6 +275,7 @@
 			files = (
 				D8524AA8228DABD60098F259 /* EnvoirnmentTests.swift in Sources */,
 				D85249C0228C95E00098F259 /* EndPoint.swift in Sources */,
+				D8524AE7228EB1D50098F259 /* Reachability.swift in Sources */,
 				D85249F0228CB3820098F259 /* Environment.swift in Sources */,
 				D8524AA2228D9C170098F259 /* Endpoint+Ext.swift in Sources */,
 				D85249C4228C95E00098F259 /* EndPointProvider.swift in Sources */,

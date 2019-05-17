@@ -22,16 +22,27 @@ public enum Response<Class> {
 public typealias Completion<Class: Decodable> = (Response<Class>) -> Void
 
 public class NetworkManager {
-    public static let shared = NetworkManager()
-    
+    private static var envoirnment: Environment!
     private let session = URLSession.init(configuration: .ephemeral)
-    public var envoirnment: Environment = Environment.getProdEnvironment()
+    private let reachabilityManager = ReachabilityManager()
+    
+    public static var shared: NetworkManager {
+        guard NetworkManager.envoirnment != nil else {
+            fatalError("Configure Network Envoirnment")
+        }
+        return NetworkManager()
+    }
     
     @discardableResult
     public func request<E: EndPointProvider>(request: E, completion: @escaping Completion<E.ResponseDTO>) -> NetworkTask? {
         
         guard let urlRequest = request.endpoint.asURLRequest() else {
             completion(.failure(.invalidRequest))
+            return nil
+        }
+        
+        guard reachabilityManager.isReachable else {
+            completion(.failure(.notAccessible))
             return nil
         }
         
@@ -55,7 +66,13 @@ public class NetworkManager {
         return networkTask
     }
     
-        
+    public static func setNetworkEnvironment(envoirnment: Environment) {
+        self.envoirnment = envoirnment
+    }
+    
+    public static func getNetworkEnvironment() -> Environment {
+        return envoirnment
+    }
 }
     
 

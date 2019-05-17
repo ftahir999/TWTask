@@ -14,6 +14,7 @@ class PostsDetailsViewController: UIViewController, Instantiatable {
     @IBOutlet weak var postDetailsViewModel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
     
     var viewModel: PostDetailsViewModel!
     var router: PostsRouter!
@@ -27,7 +28,6 @@ class PostsDetailsViewController: UIViewController, Instantiatable {
     
     private func displayUserInfo() {
         viewModel.userViewModel.bind { [weak self] in
-            
             self?.userEmailLabel.text = $0.email
         }
         viewModel.fetchUserInfo()
@@ -37,12 +37,26 @@ class PostsDetailsViewController: UIViewController, Instantiatable {
         viewModel.comments.bind { [weak self] (_) in
             self?.tableView.reloadData()
         }
+        viewModel.isLoadingComments.bind { [weak self] in
+            $0 ? self?.displayActivityIndicator() : self?.hideActivityIndicator()
+        }
         viewModel.fetchPostComments()
     }
     
     private func displayPostDetails() {
         self.postTitleLabel.text = viewModel.postVM?.title
         self.postDetailsViewModel.text = viewModel.postVM?.detail
+    }
+    
+    private func displayActivityIndicator() {
+        view.addSubview(activityIndicator)
+        activityIndicator.frame = view.bounds
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideActivityIndicator() {
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
     }
    
 }
@@ -53,7 +67,7 @@ extension PostsDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? CommentTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: String.init(describing: CommentTableViewCell.self), for: indexPath) as? CommentTableViewCell {
             let viewModel = self.viewModel.comments.value[indexPath.row]
             cell.bindViewModel(viewModel: viewModel)
             return cell

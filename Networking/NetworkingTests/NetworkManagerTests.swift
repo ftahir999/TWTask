@@ -11,6 +11,13 @@ import XCTest
 
 class NetworkingTests: XCTestCase {
     
+    var manager: MockNetworkManager!
+    
+    override func setUp() {
+        NetworkManager.setNetworkEnvironment(envoirnment: .getProdEnvironment())
+        manager = MockNetworkManager()
+    }
+    
     func testValidRequestURL() {
         let request = DummyRequest.init(path: "/path")
         XCTAssertNotNil(request.endpoint.asURLRequest)
@@ -23,7 +30,7 @@ class NetworkingTests: XCTestCase {
     
     func testInValidRequestError() {
         let request = DummyRequest.init(path: "\\////path")
-        MockNetworkManager.shared.request(request: request) { (response) in
+        manager.request(request: request) { (response) in
             switch response {
             case .failure(let error):
                 XCTAssertTrue(error! == NetworkError.invalidRequest)
@@ -35,7 +42,6 @@ class NetworkingTests: XCTestCase {
     
     func testValidDataReturned() {
         let request = DummyRequest.init(path: "/path")
-        let manager = MockNetworkManager()
         manager.response = DummyData(response: "asdfasdf")
         manager.request(request: request) { (response) in
             switch response {
@@ -49,7 +55,6 @@ class NetworkingTests: XCTestCase {
     
     func testInValidDataFound() {
         let request = DummyRequest.init(path: "/path")
-        let manager = MockNetworkManager()
         manager.response = nil
         manager.request(request: request) { (response) in
             switch response {
