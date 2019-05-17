@@ -24,9 +24,7 @@ class PostListViewModel {
     func fetchAllPosts() {
         isLoadingData.value = true
         dataProvider?.fetchPosts() { [weak self] (posts) in
-            guard let self = self else {
-                return
-            }
+            guard let self = self else { return }
             self.isLoadingData.value = false
             guard let posts = posts else {
                 self.displayErrorMessage.value = true

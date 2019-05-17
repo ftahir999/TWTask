@@ -15,8 +15,8 @@ public enum HttpMethod: String {
     case delete
 }
 
-public struct Endpoint <D: Decodable>{
-    public typealias ResponseDTO = D
+public struct Endpoint <Class: Decodable>{
+    public typealias ResponseDTO = Class
     public let method: HttpMethod
     public let path: String
     public let query: [String: String]

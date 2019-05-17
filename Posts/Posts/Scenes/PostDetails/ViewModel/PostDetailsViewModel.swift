@@ -23,9 +23,10 @@ class PostDetailsViewModel {
         guard let postId = post.id else {
             return
         }
-        dataProvider.fetchCommentsForPost(postId: postId) { [weak self] (comments) in
-            self?.isLoadingComments.value = false
-            self?.mapCommentsViewModels(comments: comments)
+        dataProvider.fetchCommentsForPost(postId: postId) { [weak self] in
+            guard let self = self else { return }
+            self.isLoadingComments.value = false
+            self.mapCommentsViewModels(comments: $0)
         }
     }
     
@@ -33,8 +34,9 @@ class PostDetailsViewModel {
         guard let userId = post.userId else {
             return
         }
-        dataProvider.fetchUserInfo(userId: userId){ [weak self] (user) in
-            self?.mapUserViewModel(user: user)
+        dataProvider.fetchUserInfo(userId: userId){ [weak self] in
+            guard let self = self else { return }
+            self.mapUserViewModel(user: $0)
         }
     }
     

@@ -9,7 +9,7 @@
 import Foundation
 
 public class Dynamic<T> {
-    public typealias Listener = (T) -> ()
+    public typealias Listener = (T) -> Void
     var listener: Listener?
     
     public func bind(_ listener: Listener?) {

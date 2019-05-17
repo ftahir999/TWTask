@@ -10,9 +10,9 @@ import Foundation
 import Networking
 import Persistence
 
-public typealias AllPostsHandler = (Posts?) -> ()
-public typealias PostCommentsHandler = (Comments?) -> ()
-public typealias UserInfoHandler = (User?) -> ()
+public typealias AllPostsHandler = (Posts?) -> Void
+public typealias PostCommentsHandler = (Comments?) -> Void
+public typealias UserInfoHandler = (User?) -> Void
 
 public class DataProvider {
     

@@ -24,14 +24,17 @@ class PostsViewController: UIViewController, Instantiatable {
     // Private
     private func fetchAllPosts() {
         viewModel.postsVMs.bind { [weak self] (_) in
-            self?.tableView.reloadData()
+            guard let self = self else { return }
+            self.tableView.reloadData()
         }
         viewModel.isLoadingData.bind { [weak self] in
-            $0 ? self?.displayActivityIndicator() : self?.hideActivityIndicator()
+            guard let self = self else { return }
+            $0 ? self.displayActivityIndicator() : self.hideActivityIndicator()
         }
         
         viewModel.displayErrorMessage.bind { [weak self] (_) in
-            self?.displayPostsNotAvailableErrorMessage()
+            guard let self = self else { return }
+            self.displayPostsNotAvailableErrorMessage()
         }
         viewModel.fetchAllPosts()
     }

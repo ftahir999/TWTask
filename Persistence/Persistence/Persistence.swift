@@ -18,7 +18,7 @@ public class Persistence {
     }
     
     @discardableResult
-    public func save<T: Encodable>(value: T, directory: Directory, fileName: String) -> Bool {
+    public func save<Entity: Encodable>(value: Entity, directory: Directory, fileName: String) -> Bool {
         let data = try? JSONEncoder().encode(value)
         guard let url = getFileURL(directory: directory, fileName: fileName) else {
             return false
@@ -33,10 +33,10 @@ public class Persistence {
         return true
     }
     
-    public func reterive<T: Decodable>(directory: Directory, fileName: String) -> T? {
+    public func reterive<Entity: Decodable>(directory: Directory, fileName: String) -> Entity? {
         if let url = getFileURL(directory: directory, fileName: fileName),
             let data = try? Data(contentsOf: url) {
-            guard let value = try? JSONDecoder().decode(T.self, from: data) else {
+            guard let value = try? JSONDecoder().decode(Entity.self, from: data) else {
                 return nil
             }
             return value
