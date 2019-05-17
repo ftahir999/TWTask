@@ -15,6 +15,12 @@
 		D85249F7228D49D10098F259 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85249F6228D49D10098F259 /* AppCoordinator.swift */; };
 		D8524A8F228D5CEC0098F259 /* Posts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8524A8E228D5CEC0098F259 /* Posts.framework */; };
 		D8524A90228D5CEC0098F259 /* Posts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8524A8E228D5CEC0098F259 /* Posts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8524AED228EC4D10098F259 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8524AEC228EC4D10098F259 /* Persistence.framework */; };
+		D8524AEE228EC4D10098F259 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8524AEC228EC4D10098F259 /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8524AF0228EC4D10098F259 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8524AEF228EC4D10098F259 /* Networking.framework */; };
+		D8524AF1228EC4D10098F259 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8524AEF228EC4D10098F259 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8524B09228EC8450098F259 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8524B08228EC8450098F259 /* Common.framework */; };
+		D8524B0A228EC8450098F259 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8524B08228EC8450098F259 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +40,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D8524AEE228EC4D10098F259 /* Persistence.framework in Embed Frameworks */,
+				D8524B0A228EC8450098F259 /* Common.framework in Embed Frameworks */,
 				D8524A90228D5CEC0098F259 /* Posts.framework in Embed Frameworks */,
+				D8524AF1228EC4D10098F259 /* Networking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +62,9 @@
 		D85249A3228C93CA0098F259 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D85249F6228D49D10098F259 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D8524A8E228D5CEC0098F259 /* Posts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Posts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8524AEC228EC4D10098F259 /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8524AEF228EC4D10098F259 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8524B08228EC8450098F259 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8524AF0228EC4D10098F259 /* Networking.framework in Frameworks */,
 				D8524A8F228D5CEC0098F259 /* Posts.framework in Frameworks */,
+				D8524B09228EC8450098F259 /* Common.framework in Frameworks */,
 				D85249A4228C93CA0098F259 /* Foundation.framework in Frameworks */,
+				D8524AED228EC4D10098F259 /* Persistence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,9 @@
 				D852492B228C90320098F259 /* Products */,
 				D85249A2228C93CA0098F259 /* Frameworks */,
 				D8524A8E228D5CEC0098F259 /* Posts.framework */,
+				D8524AEF228EC4D10098F259 /* Networking.framework */,
+				D8524AEC228EC4D10098F259 /* Persistence.framework */,
+				D8524B08228EC8450098F259 /* Common.framework */,
 			);
 			sourceTree = "<group>";
 		};
