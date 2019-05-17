@@ -28,17 +28,20 @@ class PostsDetailsViewController: UIViewController, Instantiatable {
     
     private func displayUserInfo() {
         viewModel.userViewModel.bind { [weak self] in
-            self?.userEmailLabel.text = $0.email
+            guard let self = self else { return }
+            self.userEmailLabel.text = $0.email
         }
         viewModel.fetchUserInfo()
     }
     
     private func displayComments() {
         viewModel.comments.bind { [weak self] (_) in
-            self?.tableView.reloadData()
+            guard let self = self else { return }
+            self.tableView.reloadData()
         }
         viewModel.isLoadingComments.bind { [weak self] in
-            $0 ? self?.displayActivityIndicator() : self?.hideActivityIndicator()
+            guard let self = self else { return }
+            $0 ? self.displayActivityIndicator() : self.hideActivityIndicator()
         }
         viewModel.fetchPostComments()
     }
