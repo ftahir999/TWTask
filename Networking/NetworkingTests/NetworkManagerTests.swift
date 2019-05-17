@@ -19,17 +19,17 @@ class NetworkingTests: XCTestCase {
     }
     
     func testValidRequestURL() {
-        let request = DummyRequest.init(path: "/path")
+        let request = DummyRequest(path: "/path")
         XCTAssertNotNil(request.endpoint.asURLRequest)
     }
     
     func testInValidRequestURL() {
-        let request = DummyRequest.init(path: "\\////path")
+        let request = DummyRequest(path: "\\////path")
         XCTAssertNil(request.endpoint.asURLRequest())
     }
     
     func testInValidRequestError() {
-        let request = DummyRequest.init(path: "\\////path")
+        let request = DummyRequest(path: "\\////path")
         manager.request(request: request) { (response) in
             switch response {
             case .failure(let error):
@@ -41,7 +41,7 @@ class NetworkingTests: XCTestCase {
     }
     
     func testValidDataReturned() {
-        let request = DummyRequest.init(path: "/path")
+        let request = DummyRequest(path: "/path")
         manager.response = DummyData(response: "asdfasdf")
         manager.request(request: request) { (response) in
             switch response {
@@ -54,7 +54,7 @@ class NetworkingTests: XCTestCase {
     }
     
     func testInValidDataFound() {
-        let request = DummyRequest.init(path: "/path")
+        let request = DummyRequest(path: "/path")
         manager.response = nil
         manager.request(request: request) { (response) in
             switch response {

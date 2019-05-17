@@ -14,7 +14,7 @@ class PostDetailsViewModel {
     var post: Post!
     var postVM: PostViewModel?
     var comments: Dynamic<[CommentViewModel]> = Dynamic([CommentViewModel]())
-    var userViewModel: Dynamic<UserViewModel> = Dynamic(UserViewModel.init(model: User(id: 0, name: "", email: "", phone: "")))
+    var userViewModel: Dynamic<UserViewModel> = Dynamic(UserViewModel(model: User(id: 0, name: "", email: "", phone: "")))
     var dataProvider: DataProvider!
     var isLoadingComments = Dynamic(false)
     

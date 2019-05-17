@@ -23,7 +23,7 @@ public typealias Completion<Class: Decodable> = (Response<Class>) -> Void
 
 public class NetworkManager {
     private static var envoirnment: Environment!
-    private let session = URLSession.init(configuration: .ephemeral)
+    private let session = URLSession(configuration: .ephemeral)
     private let reachabilityManager = ReachabilityManager()
     
     public static var shared: NetworkManager {

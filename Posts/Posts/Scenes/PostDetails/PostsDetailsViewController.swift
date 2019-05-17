@@ -67,7 +67,7 @@ extension PostsDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: String.init(describing: CommentTableViewCell.self), for: indexPath) as? CommentTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CommentTableViewCell.self), for: indexPath) as? CommentTableViewCell {
             let viewModel = self.viewModel.comments.value[indexPath.row]
             cell.bindViewModel(viewModel: viewModel)
             return cell

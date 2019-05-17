@@ -31,7 +31,7 @@ public class PostsRouter: Router {
     
     func pushPostDetailsVC(post: Post) {
         let controller = PostsDetailsViewController.instantiate()
-        controller.viewModel = PostDetailsViewModel.init(post: post, dataProvider: dataProvider)
+        controller.viewModel = PostDetailsViewModel(post: post, dataProvider: dataProvider)
         controller.router = self
         rootViewController.pushViewController(controller, animated: true)
     }

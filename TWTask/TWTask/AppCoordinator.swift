@@ -22,7 +22,7 @@ class AppCoordinator {
     
     func startPostsFlow() {
         let dataProvider = DataProvider(networkingManager: NetworkManager.shared, persistence: Persistence.shared)
-        router = PostsRouter.init(dataProvider: dataProvider)
+        router = PostsRouter(dataProvider: dataProvider)
         appWindow.rootViewController = router?.rootViewController
         appWindow.makeKeyAndVisible()
         router?.start()

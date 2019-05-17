@@ -14,7 +14,7 @@ class EnvoirnmentTests: XCTestCase {
     var envoirnment: Environment?
     
     override func setUp() {
-        envoirnment = Environment.init(target: .prod, host: "google.com", scheme: "http", commonHeaders: [:])
+        envoirnment = Environment(target: .prod, host: "google.com", scheme: "http", commonHeaders: [:])
     }
     
     func testEnvoirnmentHost() {

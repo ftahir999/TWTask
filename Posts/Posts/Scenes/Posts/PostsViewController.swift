@@ -49,8 +49,8 @@ class PostsViewController: UIViewController, Instantiatable {
     
     private func displayPostsNotAvailableErrorMessage() {
         let errorMessage = viewModel.getPostsNotAvailableErrorMessage()
-        let controller = UIAlertController.init(title: errorMessage.title, message: errorMessage.message, preferredStyle: .alert)
-        let action = UIAlertAction.init(title: errorMessage.actionText, style: .default, handler: nil)
+        let controller = UIAlertController(title: errorMessage.title, message: errorMessage.message, preferredStyle: .alert)
+        let action = UIAlertAction(title: errorMessage.actionText, style: .default, handler: nil)
         controller.addAction(action)
         self.present(controller, animated: true, completion: nil)
     }
@@ -64,7 +64,7 @@ extension PostsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: String.init(describing: PostTableViewCell.self), for: indexPath) as? PostTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PostTableViewCell.self), for: indexPath) as? PostTableViewCell {
             let viewModel = self.viewModel.postsVMs.value[indexPath.row]
             cell.bindViewModel(viewModel: viewModel)
             return cell
