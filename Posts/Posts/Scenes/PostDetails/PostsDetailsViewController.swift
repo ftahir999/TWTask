@@ -26,15 +26,15 @@ class PostsDetailsViewController: UIViewController, Instantiatable {
     }
     
     private func displayUserInfo() {
-        viewModel.userViewModel?.bind { [weak self] in
+        viewModel.userViewModel.bind { [weak self] in
             
-            self?.userEmailLabel.text = self?.viewModel.userViewModel?.value.email
+            self?.userEmailLabel.text = $0.email
         }
         viewModel.fetchUserInfo()
     }
     
     private func displayComments() {
-        viewModel.comments.bind { [weak self] in
+        viewModel.comments.bind { [weak self] (_) in
             self?.tableView.reloadData()
         }
         viewModel.fetchPostComments()

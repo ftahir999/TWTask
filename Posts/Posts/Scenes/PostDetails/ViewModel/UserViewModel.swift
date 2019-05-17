@@ -20,4 +20,5 @@ struct UserViewModel {
     init(model: User) {
         self.model = model
     }
+    
 }

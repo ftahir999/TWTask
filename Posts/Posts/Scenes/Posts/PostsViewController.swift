@@ -21,7 +21,7 @@ class PostsViewController: UIViewController, Instantiatable {
     }
     
     private func displayAllPosts() {
-        viewModel.postsVMs.bind { [weak self] in
+        viewModel.postsVMs.bind { [weak self] (_) in
             self?.tableView.reloadData()
         }
         viewModel.fetchAllPosts()

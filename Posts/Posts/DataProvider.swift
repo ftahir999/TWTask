@@ -18,9 +18,6 @@ public class DataProvider {
     
     func fetchPosts(handler: @escaping AllPostsHandler) {
         let fileName = FilePath.posts.path()
-        let cachedModel: Posts? = self.loadSaveData(fileName: fileName)
-        handler(cachedModel)
-        return
         let request = FetchPostsRequest()
         NetworkManager.shared.request(request: request) { [weak self] (response) in
             switch response {

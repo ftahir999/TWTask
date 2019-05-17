@@ -30,8 +30,8 @@ class PostDetailsViewModelTests: XCTestCase {
     
     func testUserModelReceived() {
         viewModel.fetchUserInfo()
-        let userModel = viewModel.userViewModel?.value
-        XCTAssertTrue(userModel?.name == "Leanne Graham")
-        XCTAssertTrue(userModel?.email == "Sincere@april.biz")
+        let userModel = viewModel.userViewModel.value
+        XCTAssertTrue(userModel.name == "Leanne Graham")
+        XCTAssertTrue(userModel.email == "Sincere@april.biz")
     }
 }

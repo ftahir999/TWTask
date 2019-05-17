@@ -9,7 +9,7 @@
 import Foundation
 
 public class Dynamic<T> {
-    public typealias Listener = () -> ()
+    public typealias Listener = (T) -> ()
     var listener: Listener?
     
     public func bind(_ listener: Listener?) {
@@ -18,7 +18,7 @@ public class Dynamic<T> {
     
     public var value: T {
         didSet {
-            listener?()
+            listener?(value)
         }
     }
     

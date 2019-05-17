@@ -12,8 +12,8 @@ import Common
 
 class PostDetailsViewModel {
     var postVM: PostViewModel?
-    var comments = Dynamic([CommentViewModel]())
-    var userViewModel: Dynamic<UserViewModel>?
+    var comments: Dynamic<[CommentViewModel]> = Dynamic([CommentViewModel]())
+    var userViewModel: Dynamic<UserViewModel> = Dynamic(UserViewModel.init(model: User(id: 0, name: "", email: "", phone: "")))
     var dataProvider: DataProvider!
     var post: Post!
     
@@ -52,7 +52,7 @@ class PostDetailsViewModel {
         guard let user = user else {
             return
         }
-        userViewModel = Dynamic.init(UserViewModel(model: user))
+        userViewModel.value = UserViewModel(model: user)
     }
     
     init(post: Post, dataProvider: DataProvider) {

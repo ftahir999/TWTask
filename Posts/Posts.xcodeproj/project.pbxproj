@@ -62,6 +62,9 @@
 		D8524AD5228DD4430098F259 /* PostListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AD4228DD4420098F259 /* PostListViewModelTests.swift */; };
 		D8524AD7228DDC1A0098F259 /* PostDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524AD6228DDC1A0098F259 /* PostDetailsViewModelTests.swift */; };
 		D8524ADC228DFD0A0098F259 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524ADB228DFD0A0098F259 /* Constants.swift */; };
+		D8524AE2228E98D60098F259 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A8A228D59D10098F259 /* DataProvider.swift */; };
+		D8524AE3228E98F20098F259 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524ADB228DFD0A0098F259 /* Constants.swift */; };
+		D8524AE4228E993A0098F259 /* PostsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8524A8C228D5A0F0098F259 /* PostsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -472,10 +475,12 @@
 				D8524AC2228DB7F00098F259 /* PostListViewModel.swift in Sources */,
 				D8524AAF228DB5F90098F259 /* FetchPostsRequestTests.swift in Sources */,
 				D8524ABF228DB7E90098F259 /* CommentViewModel.swift in Sources */,
+				D8524AE2228E98D60098F259 /* DataProvider.swift in Sources */,
 				D8524AD5228DD4430098F259 /* PostListViewModelTests.swift in Sources */,
 				D8524AB8228DB7D10098F259 /* Comment.swift in Sources */,
 				D8524AB7228DB7B80098F259 /* UserTests.swift in Sources */,
 				D8524AC1228DB7F00098F259 /* PostViewModel.swift in Sources */,
+				D8524AE3228E98F20098F259 /* Constants.swift in Sources */,
 				D8524ACF228DBE450098F259 /* PostsDetailsViewController.swift in Sources */,
 				D8524ABE228DB7E90098F259 /* PostDetailsViewModel.swift in Sources */,
 				D8524ACA228DBA320098F259 /* XCTestCase+Ext.swift in Sources */,
@@ -484,6 +489,7 @@
 				D8524AC0228DB7E90098F259 /* UserViewModel.swift in Sources */,
 				D8524AB9228DB7D30098F259 /* Post.swift in Sources */,
 				D8524AD0228DBE450098F259 /* PostTableViewCell.swift in Sources */,
+				D8524AE4228E993A0098F259 /* PostsRouter.swift in Sources */,
 				D8524AD3228DC80D0098F259 /* MockDataProvider.swift in Sources */,
 				D8524A11228D4E510098F259 /* PostsTests.swift in Sources */,
 				D8524ACD228DBE2E0098F259 /* PostsViewController.swift in Sources */,
